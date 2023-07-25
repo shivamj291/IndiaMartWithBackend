@@ -2,7 +2,9 @@
 import mainNavbar from "../components/mainNavbar.js";
 document.getElementById("navbar").innerHTML=mainNavbar();
 
-
+var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
+document.querySelector("#span_signIn").innerHTML="Hi!" +" "+store;
+ 
 var box= document.getElementById("blackBox");
 let display= ()=>{
     box.innerHTML=null;
@@ -102,7 +104,7 @@ display();
             Locality:document.getElementById("locality").value
       }
 
-        let response = await fetch(`http://localhost:8000/seller`,{
+        let response = await fetch(`https://long-red-ant-coat.cyclic.app/seller`,{
             method: "POST",
             body: JSON.stringify(body),
             headers: {"Content-Type": "application/json"}

@@ -9,8 +9,8 @@ import { footer } from "../components/footer.js";
 document.getElementById("navbar").innerHTML=mainNavbar();
 document.getElementById("footer").innerHTML=footer();
 
-console.log("adfsd")
-
+var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
+document.querySelector("#span_signIn").innerHTML="Hi!" +" "+store;
 let generateOTP = (otpVerify) => {
   if (otpVerify.length > 0) {
     otpVerify = '';

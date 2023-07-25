@@ -8,6 +8,8 @@ import {footer} from '../components/footer.js'
 document.querySelector("#footer").innerHTML=footer();
 document.getElementById('navbar').innerHTML = mainNavbar();
 // document.getElementById('review').innerHTML = getRewiews();
+var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
+document.querySelector("#span_signIn").innerHTML="Hi!" +" "+store;
 
 document.getElementById('i-searchbtn').addEventListener('click',() => {
     fetch();
@@ -19,7 +21,7 @@ let fetch = async () => {
     let query = document.getElementById('i-searchbar').value;
 
    
-    let url = `http://localhost:8000/data?q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?q=${query}`
 
     let data = await fetchData(url);
     console.log((data));
@@ -108,7 +110,7 @@ document.getElementById('nearme-btn').addEventListener('click',()=> {
 
 let fetchCity = async ()=> {
 
-    let url = `http://localhost:8000/data?city=Pune`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Pune`
 
     let data = await fetchData(url);
     console.log(data);
@@ -127,7 +129,7 @@ let fetchCityPune = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
      
-    let url = `http://localhost:8000/data?city=Pune&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Pune&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -145,7 +147,7 @@ let fetchCityindore = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Indore&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Indore&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -164,7 +166,7 @@ let fetchCitydelhi = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Delhi&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Delhi&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -182,7 +184,7 @@ document.getElementById('agra').addEventListener('click',()=> {
 let fetchCityagra = async ()=> {
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Agra&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Agra&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -200,7 +202,7 @@ document.getElementById('rajkot').addEventListener('click',()=> {
 let fetchCityRajkot = async ()=> {
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Rajkot&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Rajkot&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -219,7 +221,7 @@ let fetchCityBathinda = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Bathinda&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Bathinda&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -236,7 +238,7 @@ document.getElementById('madurai').addEventListener('click',()=> {
 let fetchCityMadurai = async ()=> {
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Madurai&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Madurai&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -254,7 +256,7 @@ let fetchCityBanglore = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Banglore&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Banglore&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -274,7 +276,7 @@ let fetchCityChennai = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Chennai&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Chennai&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -293,7 +295,7 @@ let fetchCityHyderabad = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
 
-    let url = `http://localhost:8000/data?city=Hyderabad&q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?city=Hyderabad&q=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -310,7 +312,7 @@ let fetchManufacturer = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
      
-    let url = `http://localhost:8000/data?Seller_type=Manufacturer&category=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?Seller_type=Manufacturer&category=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -330,7 +332,7 @@ let fetchWholeSeller = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
      
-    let url = `http://localhost:8000/data?Seller_type=Wholeseller&category=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?Seller_type=Wholeseller&category=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -347,7 +349,7 @@ let fetchExporter = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
      
-    let url = `http://localhost:8000/data?Seller_type=Exporter&category=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?Seller_type=Exporter&category=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -364,7 +366,7 @@ let fetchRetailer = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
      
-    let url = `http://localhost:8000/data?Seller_type=Retailer&category=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?Seller_type=Retailer&category=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -380,7 +382,7 @@ let fetchBlack_rice = async ()=> {
 
     let query = document.getElementById('i-searchbar').value;
      
-    let url = `http://localhost:8000/data?Color=Black&cat=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?Color=Black&cat=${query}`
 
     let data = await fetchData(url);
     console.log(data);
@@ -396,7 +398,7 @@ document.getElementById("golden_rice").addEventListener('click',()=> {
  
      let query = document.getElementById('i-searchbar').value;
       
-     let url = `http://localhost:8000/data?Color=Golden&cat=${query}`
+     let url = `https://long-red-ant-coat.cyclic.app/data?Color=Golden&cat=${query}`
  
      let data = await fetchData(url);
      console.log(data);
@@ -412,7 +414,7 @@ document.getElementById("golden_rice").addEventListener('click',()=> {
  
      let query = document.getElementById('i-searchbar').value;
       
-     let url = `http://localhost:8000/data?Color=Brown&cat=${query}`
+     let url = `https://long-red-ant-coat.cyclic.app/data?Color=Brown&cat=${query}`
  
      let data = await fetchData(url);
      console.log(data);
@@ -428,7 +430,7 @@ document.getElementById("golden_rice").addEventListener('click',()=> {
  
      let query = document.getElementById('i-searchbar').value;
       
-     let url = `http://localhost:8000/data?Color=White&cat=${query}`
+     let url = `https://long-red-ant-coat.cyclic.app/data?Color=White&cat=${query}`
  
      let data = await fetchData(url);
      console.log(data);
@@ -443,7 +445,7 @@ document.getElementById('body').onload('click',()=> {
 
 let fetchDataRandom = async ()=> {
 
-    let url = `http://localhost:8000/data/`
+    let url = `https://long-red-ant-coat.cyclic.app/data/`
 
     let data = await fetchData(url);
   //  console.log(data);

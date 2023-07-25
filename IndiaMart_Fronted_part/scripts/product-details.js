@@ -1,4 +1,6 @@
-import mainNavbar from "../components/mainNavbar.js"
+import mainNavbar from "../Components/mainNavbar.js"
+
+
 import {fetchData} from "../utils/utils.js"
 document.getElementById('navbar').innerHTML = mainNavbar();
 
@@ -9,7 +11,7 @@ let id = JSON.parse(localStorage.getItem("ID")) || [];
 
 let fetch = async () => {
     
-    let url = `http://localhost:8000/data?id=${id}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?id=${id}`
     let data = await fetchData(url);
       console.log(data.data[0]);
     displayImage(data.data[0]);
@@ -199,7 +201,7 @@ let fetchApi= async () => {
     let query = document.getElementById('i-searchbar').value;
 
     // let url = `http://localhost:3000/Users/?q=${query}`
-    let url = `http://localhost:8000/data?q=${query}`
+    let url = `https://long-red-ant-coat.cyclic.app/data?q=${query}`
 
     let data = await fetchData(url);
     console.log((data));

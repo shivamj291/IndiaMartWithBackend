@@ -1,6 +1,6 @@
 
 import {show,structureBox} from '../components/show.js'
-import mainNavbar from '../Components/mainNavbar.js';
+
 import {footer} from '../components/footer.js'
 
 
@@ -10,9 +10,8 @@ document.querySelector("#footer").innerHTML=footer();
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-fetch('https://easy-erin-kingfisher-coat.cyclic.app/').then((res)=>res.json()).then((data)=>console.log(data))
-
  var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
+ console.log(store)
  
  if(store!=undefined){
     var hid=document.querySelector("#user");
