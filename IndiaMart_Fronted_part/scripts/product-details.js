@@ -8,7 +8,13 @@ let id = JSON.parse(localStorage.getItem("ID")) || [];
 
  console.log(id);
 
-
+ var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
+ document.querySelector("#span_signIn").innerHTML="Hi!" +""+store;
+ 
+ document.getElementById('i-searchbtn').addEventListener('click',() => {
+     fetch();
+ })
+ 
 let fetch = async () => {
     
     let url = `https://long-red-ant-coat.cyclic.app/data?id=${id}`

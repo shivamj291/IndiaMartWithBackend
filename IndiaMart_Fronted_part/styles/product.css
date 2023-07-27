@@ -98,8 +98,7 @@
    }
    #signIn p,a{
     font-size: 14px;
-    margin:auto 0;
-    margin-left: 10px;
+
    }
    #signIn p:hover{
     color:blue;
