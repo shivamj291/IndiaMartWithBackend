@@ -1,13 +1,12 @@
-import mainNavbar from  "../components/mainNavbar.js"
-import getRewiews from  "../components/reviews.js"
-import {fetchData} from "../utils/utils.js"
+import mainNavbar from "../components/mainNavbar.js";
 
+import { fetchData } from "../utils/Utils.js";
 import {footer} from '../components/footer.js'
 
 
 document.querySelector("#footer").innerHTML=footer();
 document.getElementById('navbar').innerHTML = mainNavbar();
-// document.getElementById('review').innerHTML = getRewiews();
+
 var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
 document.querySelector("#span_signIn").innerHTML="Hi!" +" "+store;
 
@@ -24,9 +23,10 @@ let fetch = async () => {
     let url = `https://long-red-ant-coat.cyclic.app/data?q=${query}`
 
     let data = await fetchData(url);
-    console.log((data));
+
     displayData(data.data);
 }
+
 
 let displayData = (data) => {
 
@@ -303,7 +303,7 @@ let fetchCityHyderabad = async ()=> {
 }
 
 document.getElementById("manufacturer").addEventListener('click',()=> {
-    console.log("jhjhkj")
+  
    fetchManufacturer();
 })
 
@@ -320,7 +320,7 @@ let fetchManufacturer = async ()=> {
 }
 
 document.getElementById("wholeSeller").addEventListener('click',()=> {
-    console.log("jhjhkj")
+   
    fetchWholeSeller();
 })
 
@@ -340,7 +340,7 @@ let fetchWholeSeller = async ()=> {
 }
 
 document.getElementById("exporter").addEventListener('click',()=> {
-    console.log("jhjhkj")
+  
    fetchExporter();
 })
 
@@ -357,7 +357,7 @@ let fetchExporter = async ()=> {
 }
 
 document.getElementById("retailer").addEventListener('click',()=> {
-    console.log("jhjhkj")
+   
    fetchRetailer();
 })
 
@@ -448,13 +448,17 @@ let fetchDataRandom = async ()=> {
     let url = `https://long-red-ant-coat.cyclic.app/data/`
 
     let data = await fetchData(url);
-  //  console.log(data);
-   // displayData(data.data);
+   console.log(data);
+   displayData(data.data);
 }
 
 
 
-// filter by seller type
+
+
+
+
+
 
 
 
