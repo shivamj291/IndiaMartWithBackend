@@ -3,10 +3,10 @@
     return `<div id="navbar">
     <div id="logo-div">
          <div>
-            <a href="index.html"><img id="i-logo" src="../logos/indiamart.png" alt="logo" style="height:40px;"></a> 
+            <a href="../index.html"><img id="i-logo" src="../logos/indiamart.png" alt="logo" style="height:40px;"></a> 
          </div>
          <div>
-             <a href="index.html"><h2 id="i-name">indiamart</h2></a>
+             <a href="../index.html"><h2 id="i-name">indiamart</h2></a>
          </div>
          <div>
              <select name="All India" id="i-location">
