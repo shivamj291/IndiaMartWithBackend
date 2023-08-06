@@ -1,16 +1,4 @@
 
-import {show,structureBox} from '../components/show.js'
-
-import {footer} from '../components/footer.js'
-
-document.querySelector("#footer").innerHTML=footer();
-
-
-
-
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
  var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
  console.log(store)
  
@@ -126,7 +114,7 @@ document.querySelector("#build_img").addEventListener("mouseover",display_build)
 document.querySelector("#build_P").addEventListener("mouseover",display_build);
 document.querySelector("#build_show").addEventListener("mouseover",display_build);
 function display_build(){
-    show();
+   s
    
     var bui=document.querySelector("#build_show");
     bui.setAttribute("style","display:block");
@@ -161,7 +149,7 @@ document.querySelector("#ele_P").addEventListener("mouseover",display_ele);
 
 function display_ele(){
 
-    show();
+   s
     
     var ele=document.querySelector("#ele_show");
     ele.setAttribute("style","display:block");
@@ -199,7 +187,7 @@ document.querySelector("#pharma_P").addEventListener("mouseover",display_pharma)
 document.querySelector("#pharma_show").addEventListener("mouseover",display_pharma);
 
 function display_pharma(){
-    show();
+   s
 
     var pharma=document.querySelector("#pharma_show");
     pharma.setAttribute("style","display:block");
@@ -238,7 +226,7 @@ document.querySelector("#ind_M_P").addEventListener("mouseover",display_ind_M);
 document.querySelector("#ind_M_show").addEventListener("mouseover",display_ind_M);
 function display_ind_M(){
     
-    show();
+   s
 
     var ind_M=document.querySelector("#ind_M_show");
     ind_M.setAttribute("style","display:block");
@@ -278,7 +266,7 @@ document.querySelector("#ind_S_img").addEventListener("mouseover",display_ind_s)
 document.querySelector("#ind_S_show").addEventListener("mouseover",display_ind_s);
 function display_ind_s(){
 
-    show();
+   s
 
     var ind_s=document.querySelector("#ind_S_show");
     ind_s.setAttribute("style","display:block");
@@ -318,7 +306,7 @@ document.querySelector("#food_P").addEventListener("mouseover",display_food);
 document.querySelector("#food_show").addEventListener("mouseover",display_food);
 function display_food(){
 
-    show();
+   s
 
     var food=document.querySelector("#food_show");
     food.setAttribute("style","display:block");
