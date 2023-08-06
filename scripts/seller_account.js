@@ -45,7 +45,10 @@ let displayProducts=()=>{
     email.innerText= "Email: " +document.getElementById("email").value;
     let products= document.createElement("p");
     products.innerText= "Products/services: " +document.getElementById("prod").value;
-    box.append(name,number,company,email,products);
+
+    let price= document.createElement("p");
+    price.innerText= "Price: " +document.getElementById("price").value;
+    box.append(name,number,company,email,products,price);
 }
 
 let displayAddress=()=>{
@@ -63,6 +66,7 @@ let displayAddress=()=>{
     email.innerText= "Email: " +document.getElementById("email").value;
     let products= document.createElement("p");
     products.innerText= "Products/services: " +document.getElementById("prod").value;
+   
     let pincode= document.createElement("p");
     pincode.innerText= "PINCode: " +document.getElementById("pincode").value;
     
@@ -94,7 +98,7 @@ display();
           
             Image: document.getElementById("image").value,
             Product:document.getElementById("prod").value,
-
+            Price:document.getElementById("price").value,
             sell_address: document.getElementById("address").value,
             PinCode: document.getElementById("pincode").value,
             City: document.getElementById("city").value,

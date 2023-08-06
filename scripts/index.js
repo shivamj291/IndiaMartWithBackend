@@ -60,7 +60,7 @@ function hide_e(){
 
 
 
-//priya
+
 let generateOTP = (otpVerify) => {
     if (otpVerify.length > 0) {
       otpVerify = '';
