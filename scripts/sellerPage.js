@@ -2,13 +2,27 @@
 import mainNavbar from "../Components/mainNavbar.js";
 
 
-// Creating registration components
-import {structureBox} from "../components/show.js";
 import { footer } from "../components/footer.js";
 
 document.getElementById("navbar").innerHTML=mainNavbar();
 document.getElementById("footer").innerHTML=footer();
-
+let structureBox = (modalId, modalLabelId, modalTitle, inputType, inputID, placeholder, submitBtnID, nextModalID, btnName) => {
+  let modal;
+  modal = `<div id="${modalId}" tabindex="-1">
+            <h2 class="modal-title" id="${modalLabelId}">${modalTitle}</h2>
+            </div>
+              <div id="input">
+              ${inputType === 'phoneNumber' ? '<div class="col-2"><button id="cCode">+91</button></div>' : ''}
+                
+                  <input type="mobile"  minlength="10" id="${inputID}" placeholder="${placeholder}" required>
+              
+            </div>
+            <div class="d-flex my-3">
+              <button data-bs-dismiss="modal" data-bs-target="#${nextModalID ? nextModalID : modalId}" data-bs-toggle="modal" id="${submitBtnID}">${btnName}</button>
+            </div>
+    </div>`;
+  return modal;
+}
 var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
 document.querySelector("#span_signIn").innerHTML="Hi!" +" "+store;
 let generateOTP = (otpVerify) => {
