@@ -1,4 +1,4 @@
-let show= ()=>{
+let show= () =>{
     
 
        var elec=document.querySelector("#ele_show");
