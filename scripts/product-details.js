@@ -77,7 +77,7 @@ let id = JSON.parse(localStorage.getItem("ID")) || [];
      fetch();
  })
  
-let fetch = async () => {
+let fetchda = async () => {
     
     let url = `https://long-red-ant-coat.cyclic.app/data?id=${id}`
     let data = await fetchData(url);
@@ -87,7 +87,7 @@ let fetch = async () => {
     displaySeller(data.data[0]);
     displayModal(data.data[0]);
 }
-fetch();
+fetchda();
 
 let displayImage = (data) => {
 
