@@ -58,7 +58,8 @@ function mainNavbar() {
 document.getElementById("navbar").innerHTML=mainNavbar();
 
 var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
-document.querySelector("#span_signIn").innerHTML="Hi!" +" "+store;
+store ?
+document.querySelector("#span_signIn").innerHTML="Hi!" +" "+  store: document.querySelector("#span_signIn").innerHTML="SignIn"
  
 var box= document.getElementById("blackBox");
 let display= ()=>{

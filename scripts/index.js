@@ -102,7 +102,11 @@ function footer(){
 
 document.querySelector("#footer").innerHTML = footer();
 
-
+document.querySelector('#sell').addEventListener('click',()=>{
+  console.log('shivam')
+  !store ? window.location="./html/sellerPage.html" : window.location="./html/seller_account.html"
+      
+})
 let show= () =>{
     
 
@@ -152,6 +156,9 @@ let structureBox = (modalId, modalLabelId, modalTitle, inputType, inputID, place
  var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
  console.log(store)
  
+ document.querySelector('#i-bestprice').addEventListener('click',()=>{
+    store ? window.location.href = './html/product.html' : alert('SigIn First');
+ })
  if(store!=undefined){
     var hid=document.querySelector("#user");
     hid.setAttribute("style","display:block");

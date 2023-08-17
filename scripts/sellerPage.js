@@ -175,7 +175,8 @@ let structureBox = (modalId, modalLabelId, modalTitle, inputType, inputID, place
   return modal;
 }
 var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
-document.querySelector("#span_signIn").innerHTML="Hi!" +" "+store;
+store ?
+document.querySelector("#span_signIn").innerHTML="Hi!" +" "+  store : document.querySelector("#span_signIn").innerHTML="SignIn"
 let generateOTP = (otpVerify) => {
   if (otpVerify.length > 0) {
     otpVerify = '';

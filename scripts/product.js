@@ -169,7 +169,8 @@ document.querySelector("#footer").innerHTML=footer();
 document.getElementById('navbar').innerHTML = mainNavbar();
 
 var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
-document.querySelector("#span_signIn").innerHTML="Hi!" +" "+store;
+store ?
+document.querySelector("#span_signIn").innerHTML="Hi!" +" "+  store : document.querySelector("#span_signIn").innerHTML="SignIn"
 
 document.getElementById('i-searchbtn').addEventListener('click',() => {
     fetchda();

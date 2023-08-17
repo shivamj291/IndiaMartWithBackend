@@ -70,7 +70,7 @@
       Connect with 100+ Buyers from your city </p>
       <div id="append-seller"></div>
 
-      <a href="sellerPage.html"><button id="become-seller">Start Selling For Free</button></a>
+      <a><button id="become-seller">Start Selling For Free</button></a>
      
 
   </div>
@@ -80,11 +80,11 @@
 
 <script>
 
-
+var store = JSON.parse(localStorage.getItem("mobile"))||undefined;
     
 document.getElementById('become-seller').addEventListener('click',()=> {
 
-  window.location.href = "product.html";
+   !store ? window.location.href = "sellerPage.html" : window.location.href = "seller_account.html"
 })
   
 </script>
